@@ -42,7 +42,7 @@ h2 {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 75%; /* 4:3 Aspect Ratio */
+  padding-top: 100%; /* 4:3 Aspect Ratio */
   background: #dfe6e9;
   border-radius: 10px;
   overflow: hidden;
