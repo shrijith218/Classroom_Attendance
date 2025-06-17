@@ -15,7 +15,12 @@ let products = [];
 // Load product list from GitHub
 async function loadProducts() {
   try {
-    const res = fetch('https://barcode-backend.onrender.com/scan',;
+    const res = await fetch('https://barcode-backend.onrender.com/scan', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ barcode: code })
+});
+
     products = res.data;
     console.log(`✅ Loaded ${products.length} products`);
   } catch (err) {
